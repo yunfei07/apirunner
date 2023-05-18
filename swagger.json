@@ -1,0 +1,53 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a sample server.",
+    "title": "Sample API",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "apiteam@swagger.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "host": "postman-echo.com",
+  "basePath": "",
+  "paths": {
+    "/get": {
+      "get": {
+        "summary": "postman get info",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "enum": ["a", "b", "c"],
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "age",
+            "in": "query",
+            "enum": [20, 30, 40],
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "gender",
+            "in": "query",
+            "enum": ["male", "female"],
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          }
+        }
+      }
+    }
+  }
+}

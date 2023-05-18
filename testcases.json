@@ -1,0 +1,200 @@
+[
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "a",
+            "age": 20,
+            "gender": "male"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "a",
+            "age": 20,
+            "gender": "female"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "a",
+            "age": 30,
+            "gender": "male"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "a",
+            "age": 30,
+            "gender": "female"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "a",
+            "age": 40,
+            "gender": "male"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "a",
+            "age": 40,
+            "gender": "female"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "b",
+            "age": 20,
+            "gender": "male"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "b",
+            "age": 20,
+            "gender": "female"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "b",
+            "age": 30,
+            "gender": "male"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "b",
+            "age": 30,
+            "gender": "female"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "b",
+            "age": 40,
+            "gender": "male"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "b",
+            "age": 40,
+            "gender": "female"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "c",
+            "age": 20,
+            "gender": "male"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "c",
+            "age": 20,
+            "gender": "female"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "c",
+            "age": 30,
+            "gender": "male"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "c",
+            "age": 30,
+            "gender": "female"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "c",
+            "age": 40,
+            "gender": "male"
+        },
+        "expect": 200
+    },
+    {
+        "name": "_get_name_age_gender",
+        "interface": "/get",
+        "method": "GET",
+        "params": {
+            "name": "c",
+            "age": 40,
+            "gender": "female"
+        },
+        "expect": 200
+    }
+]
