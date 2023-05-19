@@ -40,7 +40,7 @@ def generate_test_suite(swagger_file):
 
             setattr(test_suite, f'test_{testcase["name"]}', test_method)
 
-    with open('testcases.json', 'w') as f:
+    with open('../tests/testcases.json', 'w') as f:
         json.dump(testcases, f, indent=4, default=str)
 
     return test_suite
@@ -48,7 +48,7 @@ def generate_test_suite(swagger_file):
 
 class TestSuite(unittest.TestCase):
     def test_testcases(self):
-        with open('testcases.json') as f:
+        with open('../tests/testcases.json') as f:
             testcases = json.load(f)
 
         for testcase in testcases:
@@ -63,6 +63,6 @@ class TestSuite(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    generate_test_suite('swagger.json')
+    generate_test_suite('../tests/swagger.json')
     runner = unittest.TextTestRunner()
     runner.run(unittest.makeSuite(TestSuite))

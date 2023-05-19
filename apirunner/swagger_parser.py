@@ -53,7 +53,7 @@ def get_url(server, base_path, path):
 
 
 if __name__ == '__main__':
-    interfaces, interface_params,interface_info = parse_swagger('swagger.json')
+    interfaces, interface_params,interface_info = parse_swagger('../tests/swagger.json')
     url = get_url('http://postman-echo.com', '', interfaces[0])
     print(interfaces)
     print(interface_params)
