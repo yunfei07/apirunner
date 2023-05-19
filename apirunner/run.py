@@ -1,11 +1,21 @@
 import itertools
 import json
 import unittest
+
+from HTMLReport import TestRunner
+
 from swagger_parser import parse_swagger
 import requests
 
+BASE_URL = 'http://postman-echo.com'
 
-def generate_test_suite(swagger_file):
+
+def generate_test_suite(swagger_file: str) -> "TestSuite":
+    """
+    根据swagger文件生成测试套件
+    :param swagger_file: swagger文件(JSON格式)
+    :return: 测试套件
+    """
     interfaces, interface_params, interface_info = parse_swagger(swagger_file)
     testcases = []
     test_suite = unittest.TestSuite()
@@ -52,10 +62,10 @@ class TestSuite(unittest.TestCase):
             testcases = json.load(f)
 
         for testcase in testcases:
-            url = "http://postman-echo.com" + testcase['interface']
+            url = BASE_URL + testcase['interface']
             if testcase['method'] == 'GET':
                 response = requests.get(url, params=testcase['params'])
-                print(response.status_code)
+                print(response.text)
             elif testcase['method'] == 'POST':
                 response = requests.post(url, json=testcase['params'])
 
@@ -65,4 +75,18 @@ class TestSuite(unittest.TestCase):
 if __name__ == '__main__':
     generate_test_suite('../tests/swagger.json')
     runner = unittest.TextTestRunner()
+    # runner = TestRunner(
+    #     report_file_name="index",
+    #     output_path="report",
+    #     title="一个简单的测试报告",
+    #     description="随意描述",
+    #     thread_count=1,
+    #     thread_start_wait=0.1,
+    #     tries=3,
+    #     delay=0,
+    #     back_off=1,
+    #     retry=False,
+    #     sequential_execution=True,
+    #     lang="cn"
+    # )
     runner.run(unittest.makeSuite(TestSuite))
